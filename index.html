@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script>
+		function DayDiff(CurrentDate, compareDate) {
+			var TYear=CurrentDate.getFullYear();
+			var TDay=new Date(compareDate);
+			TDay.getFullYear(TYear);
+			var DayCount=(TDay-CurrentDate)/(1000*60*60*24);
+			DayCount=Math.round(DayCount); 
+			return(DayCount);
+		}
+		</script>
+	</head>
+	<body>
+		<script>
+		var Today = new Date();
+		document.write("There are " + DayDiff(Today, "May, 23, 2016") + " days left until REGTEKEKSAMEN.<br>");
+		document.write("There are " + DayDiff(Today, "May, 30, 2016") + " days left until STATEKSAMEN.<br>");
+		document.write("There are " + DayDiff(Today, "June, 6, 2016") + " days left until FLUIDMEKEKSAMEN.<br>");
+		document.write("There are " + DayDiff(Today, "June, 10, 2016") + " days left until C++EKSAMEN.<br>");
+		</script>
+		<p>Excluding today.</p>
+	</body>
+</html>
